@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <p>temperature converter</p>
+    <input class="starter" id="input" placeholder="enter temperature in fah"/>
+    <input class="starter" id="input" placeholder="enter temperature in fah"/>
+    <h2>celsius:</h2>
+    <p class="starter" id="celsius"></p>
+    <h2>kelvin:</h2>
+    <p class="starter" id="kelvin"></p>
+
+    <script>
+      document.querySelector('#input').addEventListener('change', function(event){
+        var currentInput = event.target.value;
+        var cValue = cTemp(currentInput);
+        var kValue = kTemp(currentInput);
+        display(cValue);
+        display2(kValue);
+      });
+
+      var display = function( data ){
+        var output  = document.querySelector('#celsius');
+        output.innerText = data;
+      }
+
+      var display2 = function( data ){
+        var output2 = document.querySelector('#kelvin');
+        output2.innerText = data;
+      }
+
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
